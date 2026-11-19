@@ -1,0 +1,26 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "merchant": "KFC",
+ "count": 1,
+ "deals": [
+  {
+   "title": "KFC S’pore Launches Sweet Purple Potato Cheese Mochi from 18 Nov 2026",
+   "url": "https://singpromos.com/dining-restaurants-food/kfc-spore-launches-sweet-purple-potato-cheese-mochi-from-18-nov-2026-309905/",
+   "summary": "Chewy purple mochi with a luscious cream cheese filling for a limited time only",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2026/11/KFC-feat-singpromos.com-17-Nov-2026-550x287.jpg",
+   "categories": [
+    "dining restaurants food"
+   ],
+   "published": "2026-11-17T11:17:37+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": null,
+   "merchants": [
+    "KFC"
+   ],
+   "codes": [],
+   "id": "singpromos:309905",
+   "watched": false
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "merchants": [
+  {
+   "name": "7-Eleven",
+   "slug": "7-eleven",
+   "count": 2
+  },
+  {
+   "name": "Acronis",
+   "slug": "acronis",
+   "count": 1
+  },
+  {
+   "name": "Agoda",
+   "slug": "agoda",
+   "count": 1
+  },
+  {
+   "name": "Amazon",
+   "slug": "amazon",
+   "count": 1
+  },
+  {
+   "name": "Arena",
+   "slug": "arena",
+   "count": 1
+  },
+  {
+   "name": "Bank of China",
+   "slug": "bank-of-china",
+   "count": 1
+  },
+  {
+   "name": "Charles & Keith",
+   "slug": "charles-keith",
+   "count": 1
+  },
+  {
+   "name": "Coffee Bean",
+   "slug": "coffee-bean",
+   "count": 1
+  },
+  {
+   "name": "Equatorial Sleep",
+   "slug": "equatorial-sleep",
+   "count": 1
+  },
+  {
+   "name": "Exabytes",
+   "slug": "exabytes",
+   "count": 1
+  },
+  {
+   "name": "Expedia",
+   "slug": "expedia",
+   "count": 1
+  },
+  {
+   "name": "IHG",
+   "slug": "ihg",
+   "count": 1
+  },
+  {
+   "name": "IKEA",
+   "slug": "ikea",
+   "count": 1
+  },
+  {
+   "name": "KFC",
+   "slug": "kfc",
+   "count": 1
+  },
+  {
+   "name": "LEGO",
+   "slug": "lego",
+   "count": 1
+  },
+  {
+   "name": "McDonald’s",
+   "slug": "mcdonalds",
+   "count": 1
+  },
+  {
+   "name": "Pizza Hut",
+   "slug": "pizza-hut",
+   "count": 1
+  },
+  {
+   "name": "Popeyes",
+   "slug": "popeyes",
+   "count": 1
+  },
+  {
+   "name": "Tokyo’s Cult-Favourite Mr.CHEESECAKE",
+   "slug": "tokyos-cult-favourite-mr-cheesecake",
+   "count": 1
+  },
+  {
+   "name": "UNIQLO",
+   "slug": "uniqlo",
+   "count": 1
+  },
+  {
+   "name": "UOB",
+   "slug": "uob",
+   "count": 1
+  },
+  {
+   "name": "bb.q Chicken",
+   "slug": "bb-q-chicken",
+   "count": 1
+  },
+  {
+   "name": "foodpanda",
+   "slug": "foodpanda",
+   "count": 1
+  }
+ ]
+}

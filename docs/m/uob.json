@@ -1,0 +1,27 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "merchant": "UOB",
+ "count": 1,
+ "deals": [
+  {
+   "title": "Expedia Singapore 8% Off Selected Hotels with UOB Cards Till Dec 2026",
+   "url": "https://singpromos.com/vacations/expedia-singapore-8-off-selected-hotels-with-uob-cards-till-dec-2026-297774/",
+   "summary": "Save more on hotel stays worldwide",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2016/05/Expedia-Feat-6-May-2016-550x265.jpg",
+   "categories": [
+    "vacations"
+   ],
+   "published": "2026-11-10T00:00:00+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": null,
+   "merchants": [
+    "Expedia",
+    "UOB"
+   ],
+   "codes": [],
+   "id": "singpromos:297774",
+   "watched": true
+  }
+ ]
+}

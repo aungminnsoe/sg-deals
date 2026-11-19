@@ -1,0 +1,48 @@
+{
+  "feeds": [
+    { "name": "SingPromos", "url": "https://singpromos.com/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/dining-restaurants-food/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/warehouse-sales/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/fashion-accessories/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/computers-pc/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/banks-credit-cards/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/vacations/feed/" },
+    { "name": "SingPromos", "url": "https://singpromos.com/mobile-phones/feed/" },
+    { "name": "Great Deals SG", "url": "https://www.greatdeals.com.sg/feed/" }
+  ],
+
+  "ontoday": {
+    "enabled": true,
+    "base": "https://singpromos.com/bydate/ontoday/",
+    "pages": 3
+  },
+
+  "exclude_url_patterns": [
+    "/news/",
+    "/motor-vehicles/"
+  ],
+
+  "watchlist": [
+    "Trip.com",
+    "Agoda",
+    "Booking.com",
+    "Klook",
+    "Expedia",
+    "Singapore Airlines"
+  ],
+
+  "notify": {
+    "ntfy_topic": "",
+    "only_watchlist": false,
+    "max_per_run": 10
+  },
+
+  "fetch_promo_codes": true,
+  "max_detail_fetches": 40,
+
+  "request": {
+    "timeout": 25,
+    "delay_seconds": 0.8,
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  }
+}

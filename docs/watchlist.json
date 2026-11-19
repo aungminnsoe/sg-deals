@@ -1,0 +1,45 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "count": 2,
+ "deals": [
+  {
+   "title": "Expedia Singapore 8% Off Selected Hotels with UOB Cards Till Dec 2026",
+   "url": "https://singpromos.com/vacations/expedia-singapore-8-off-selected-hotels-with-uob-cards-till-dec-2026-297774/",
+   "summary": "Save more on hotel stays worldwide",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2016/05/Expedia-Feat-6-May-2016-550x265.jpg",
+   "categories": [
+    "vacations"
+   ],
+   "published": "2026-11-10T00:00:00+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": null,
+   "merchants": [
+    "Expedia",
+    "UOB"
+   ],
+   "codes": [],
+   "id": "singpromos:297774",
+   "watched": true
+  },
+  {
+   "title": "Agoda x Mastercard Up to 16% Off Hotel Stays Until 31 Mar 2027",
+   "url": "https://singpromos.com/vacations/agoda-x-mastercard-up-to-16-off-hotel-stays-until-31-mar-2027-305431/",
+   "summary": "Save up to 16% on eligible Agoda hotel bookings worldwide with a qualifying Mastercard",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2026/06/Agoda-Logo-singpromos.com-15-Aug-2026-550x287.jpg",
+   "categories": [
+    "vacations"
+   ],
+   "published": "2026-11-09T00:00:00+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": "2027-03-31",
+   "merchants": [
+    "Agoda"
+   ],
+   "codes": [],
+   "id": "singpromos:305431",
+   "watched": true
+  }
+ ]
+}

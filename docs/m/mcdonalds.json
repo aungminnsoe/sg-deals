@@ -1,0 +1,26 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "merchant": "McDonald’s",
+ "count": 1,
+ "deals": [
+  {
+   "title": "McDonald’s S’pore launches Maple BBQ burger meals and new merch on 26 Nov 2026",
+   "url": "https://singpromos.com/dining-restaurants-food/mcdonalds-spore-launches-maple-bbq-burger-meals-and-new-merch-on-26-nov-2026-309990/",
+   "summary": "New maple BBQ burgers, Szechuan Sauce, McPops, desserts and exclusive Hamburglar merchandise await",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2026/11/McDonalds-feat-singpromos.com-19-Nov-2026-550x289.jpg",
+   "categories": [
+    "dining restaurants food"
+   ],
+   "published": "2026-11-19T07:04:40+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": null,
+   "merchants": [
+    "McDonald’s"
+   ],
+   "codes": [],
+   "id": "singpromos:309990",
+   "watched": false
+  }
+ ]
+}

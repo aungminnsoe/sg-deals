@@ -1,0 +1,45 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "merchant": "7-Eleven",
+ "count": 2,
+ "deals": [
+  {
+   "title": "7-Eleven S’pore $1 Deals, $1.20 Fanta Blue Slurpee & Bottled Drink Offers Till 1 Dec",
+   "url": "https://singpromos.com/dining-restaurants-food/7-eleven-spore-1-deals-1-20-fanta-blue-slurpee-bottled-drink-offers-till-1-dec-309946/",
+   "summary": "Save 33% on a citrusy frozen treat and stock up on affordable snacks, coffee and more",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2026/11/7Eleven-feat-singpromos.com-18-Nov-2026-550x289.jpg",
+   "categories": [
+    "dining restaurants food"
+   ],
+   "published": "2026-11-18T10:06:52+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": "2026-12-01",
+   "merchants": [
+    "7-Eleven"
+   ],
+   "codes": [],
+   "id": "singpromos:309946",
+   "watched": false
+  },
+  {
+   "title": "7-Eleven S’pore Ice Cream Deals Up to 59% Off, 3-for-$6 Butterbear, 3-for-$5 Cornetto & More till 1 Dec",
+   "url": "https://singpromos.com/dining-restaurants-food/7-eleven-spore-ice-cream-deals-up-to-59-off-3-for-6-butterbear-3-for-5-cornetto-more-till-1-dec-309922/",
+   "summary": "Enjoy savings of up to 59% on refreshing icy treats, including exclusive flavours and new arrivals",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2025/07/7-Eleven-feat-orig-singpromos.com-2-Jul-2025-550x287.jpg",
+   "categories": [
+    "dining restaurants food"
+   ],
+   "published": "2026-11-18T06:53:33+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": "2026-12-01",
+   "merchants": [
+    "7-Eleven"
+   ],
+   "codes": [],
+   "id": "singpromos:309922",
+   "watched": false
+  }
+ ]
+}

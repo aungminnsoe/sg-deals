@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SG Deals</title>
+<style>
+  :root{
+    --bg:#f6f6f4; --card:#fff; --text:#1b1b1a; --muted:#6b6b66;
+    --line:#e3e3df; --accent:#b4551f; --chip:#eceae5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17171a; --card:#212125; --text:#ececea; --muted:#9a9a95;
+      --line:#303035; --accent:#e8a06a; --chip:#2b2b31;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    padding:0 16px 48px}
+  header{max-width:760px;margin:0 auto;padding:24px 0 12px}
+  h1{font-size:1.5rem;margin:0 0 4px}
+  .meta{color:var(--muted);font-size:.85rem}
+  .wrap{max-width:760px;margin:0 auto}
+  input[type=search]{width:100%;padding:11px 14px;margin:14px 0 10px;
+    border:1px solid var(--line);border-radius:10px;background:var(--card);
+    color:var(--text);font-size:16px}
+  .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;padding:7px 13px;border-radius:999px;background:var(--chip);
+    border:1px solid transparent;color:var(--text);font-size:.85rem;cursor:pointer;
+    white-space:nowrap}
+  .chip[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px;margin-bottom:10px;display:flex;gap:12px}
+  .card img{width:76px;height:76px;object-fit:cover;border-radius:8px;flex:0 0 auto;
+    background:var(--chip)}
+  .card a{color:inherit;text-decoration:none;font-weight:600;line-height:1.35}
+  .card a:hover{color:var(--accent)}
+  .sub{color:var(--muted);font-size:.82rem;margin-top:5px}
+  .code{display:inline-block;margin-top:7px;padding:3px 9px;border-radius:6px;
+    background:var(--chip);font-family:ui-monospace,Menlo,monospace;font-size:.82rem;
+    cursor:pointer;border:1px dashed var(--line)}
+  .badge{display:inline-block;margin-right:6px;padding:1px 6px;border-radius:4px;
+    background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;
+    letter-spacing:.04em;vertical-align:2px}
+  .empty{color:var(--muted);text-align:center;padding:40px 0}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>SG Deals</h1>
+  <div class="meta" id="meta">Loading…</div>
+</header>
+
+<main class="wrap">
+  <input type="search" id="q" placeholder="Search deals…" autocomplete="off">
+  <div class="chips" id="chips"></div>
+  <div id="list"></div>
+</main>
+
+<script>
+const listEl = document.getElementById('list');
+const chipsEl = document.getElementById('chips');
+const metaEl = document.getElementById('meta');
+const qEl = document.getElementById('q');
+let deals = [], merchant = null, mode = 'all', newIds = new Set();
+
+function esc(s){ return (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function render(){
+  const q = qEl.value.trim().toLowerCase();
+  const rows = deals.filter(d =>
+    (mode !== 'watch' || d.watched) &&
+    (mode !== 'new' || newIds.has(d.id)) &&
+    (!merchant || (d.merchants||[]).includes(merchant)) &&
+    (!q || (d.title + ' ' + (d.summary||'')).toLowerCase().includes(q))
+  );
+  if (!rows.length){ listEl.innerHTML = '<p class="empty">No deals match.</p>'; return; }
+  listEl.innerHTML = rows.map(d => {
+    const bits = [];
+    if (d.merchants && d.merchants.length) bits.push(esc(d.merchants.join(' · ')));
+    if (d.expires) bits.push('ends ' + d.expires);
+    else if (d.status) bits.push(esc(d.status));
+    const codes = (d.codes||[]).map(c =>
+      `<span class="code" data-code="${esc(c)}">${esc(c)} — tap to copy</span>`).join(' ');
+    return `<article class="card">
+      ${d.image ? `<img src="${esc(d.image)}" alt="" loading="lazy">` : ''}
+      <div>${newIds.has(d.id) ? '<span class="badge">NEW</span>' : ''}<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>
+      ${d.summary ? `<div class="sub">${esc(d.summary)}</div>` : ''}
+      <div class="sub">${bits.join(' · ')}</div>${codes}</div>
+    </article>`;
+  }).join('');
+}
+
+listEl.addEventListener('click', e => {
+  const el = e.target.closest('.code');
+  if (!el) return;
+  navigator.clipboard?.writeText(el.dataset.code);
+  el.textContent = el.dataset.code + ' — copied';
+});
+
+qEl.addEventListener('input', render);
+
+const buttons = [];
+function addChip(label, onPick, pressed){
+  const b = Object.assign(document.createElement('button'), {className:'chip', textContent:label});
+  b.type = 'button';
+  b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+  b.onclick = () => {
+    onPick();
+    buttons.forEach(x => x.setAttribute('aria-pressed','false'));
+    b.setAttribute('aria-pressed','true');
+    render();
+  };
+  chipsEl.appendChild(b); buttons.push(b);
+}
+
+Promise.all([
+  fetch('deals.json').then(r => r.json()),
+  fetch('merchants.json').then(r => r.json()).catch(() => ({merchants: []})),
+  fetch('new.json').then(r => r.json()).catch(() => ({deals: []}))
+]).then(([d, m, n]) => {
+  deals = d.deals || [];
+  newIds = new Set((n.deals || []).map(x => x.id));
+  const watchCount = deals.filter(x => x.watched).length;
+
+  metaEl.textContent = `${d.count} live deals · updated ${new Date(d.generated_at).toLocaleString('en-SG')}`;
+
+  addChip('All', () => { mode = 'all'; merchant = null; }, true);
+  if (newIds.size) addChip(`New (${newIds.size})`, () => { mode = 'new'; merchant = null; });
+  if (watchCount) addChip(`Watching (${watchCount})`, () => { mode = 'watch'; merchant = null; });
+  (m.merchants || []).forEach(entry =>
+    addChip(`${entry.name} (${entry.count})`, () => { mode = 'all'; merchant = entry.name; }));
+
+  render();
+}).catch(() => {
+  metaEl.textContent = 'No data yet.';
+  listEl.innerHTML = '<p class="empty">Run the GitHub Action once to generate deals.json.</p>';
+});
+</script>
+</body>
+</html>

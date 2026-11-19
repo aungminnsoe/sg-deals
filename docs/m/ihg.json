@@ -1,0 +1,26 @@
+{
+ "generated_at": "2026-11-19T07:59:06+00:00",
+ "merchant": "IHG",
+ "count": 1,
+ "deals": [
+  {
+   "title": "IHG Hotels & Resorts Cyber Sale Offers Up to 30% Off Hotel Stays Worldwide till 3 Dec 2026",
+   "url": "https://singpromos.com/vacations/ihg-hotels-resorts-cyber-sale-offers-up-to-30-off-hotel-stays-worldwide-till-3-dec-2026-309930/",
+   "summary": "Save on hotel stays worldwide, with free membership unlocking bigger discounts",
+   "image": "https://cdn.singpromos.com/wp-content/uploads/2026/11/IHG-singpromos.com-18-Nov-2026-550x288.jpg",
+   "categories": [
+    "vacations"
+   ],
+   "published": "2026-11-18T12:48:04+00:00",
+   "source": "SingPromos",
+   "status": null,
+   "expires": "2026-12-03",
+   "merchants": [
+    "IHG"
+   ],
+   "codes": [],
+   "id": "singpromos:309930",
+   "watched": false
+  }
+ ]
+}
